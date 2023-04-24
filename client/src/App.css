@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(10, 10, 32);
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.calculator {
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+  padding: 0.75em;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  border-radius: 0.75rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+}
+
+.button {
+  padding: 0.5em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  filter: brightness(85%);
+}
+
+.button:active {
+  background-color: #ccc;
+}
+
+.button__operator,
+.button__memory,
+.button__clear,
+.button__equal {
+  color: #f1faee;
+}
+
+.button__clear {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.button__zero {
+  grid-column: 1 / span 2;
+}
+
+.button__operator,
+.button__equal {
+  background-color: #fb8500;
+}
+
+.button__memory {
+  background-color: #ffb703;
+}
+
+.display {
+  grid-column: 1 / span 4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px 10px;
+}
